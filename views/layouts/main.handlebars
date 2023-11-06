@@ -9,39 +9,32 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
-
-<header>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div>
-            <div class="navbar-start">
-                LETS BLOG
-            </div>
- <div id="navbarBasicExample" class="navbar-item">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
-      
-
-        </div>
-        <div class="navbar-end">
-            <a class="navbar-item" href ="/createprofile">CREATE PROFILE
-            </a>
-                {{#if loggedIn}}
-                <button id="logout" class="navbar-item">Logout</button>
-                {{else}}
-                <a href="/">Login</a>
-                {{/if}}
+  <header class="display-flex justify-space-between align-center p-2" id="navContainer">
+    <nav class="navbar" id="navEdits">
+            <div id="navAlign">
+              <div id="title">Lets Blog!</div>
+              <a class="navLinks" href="/">Home</a>
+              <a class="navLinks" href="/blogs"> Dashboard</a>
+              {{#if logged_out}}   
+              <a class="navLinks" id="logIn" href="/login"> Login</a>
+              {{/if}}
+              {{#if logged_in}}
+              <a class="navLinks" id="logout"> Logout</a>
+              {{/if}}
             </div>
         </div>
     </nav>
-</header>
+  </header>
+  <main class="container container-fluid mt-5">
+    {{{ body }}}
+  </main>
+  <footer>
+      
+  </footer>
 
-{{{ body }}}
-    <footer>
-        <p>&copy; LETS BLOG</p>
-    </footer>
-</body>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 
 </html>
 

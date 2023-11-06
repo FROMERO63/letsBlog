@@ -13,4 +13,13 @@ if (req.session.loggedIn) {
 res.render('login');
 });
 
+router.get('/blogs', async (req, res) => {
+  res.render('blogs');
+});
+
+router.get('/comments', async (req, res) => {
+  res.render('comments');
+});
+
+
 module.exports = router;

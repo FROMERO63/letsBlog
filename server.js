@@ -2,17 +2,17 @@ const path = require('path');
 const express = require("express");
 const session = require("express-session");
 const exphbs = require('express-handlebars');
+const routes = require("./controllers");
+const helpers = require('./utils/auth');
 const sequelizeStore = require("connect-session-sequelize")(session.Store);
 
-const routes = require("./controllers");
+
 const sequelize = require("./config/connection");
-
-
-console.log(routes);
 
 const app = express();
 const PORT = process.env.PORT || 3001;;
 
+const hbs = exphbs.create({ helpers });
 
 
 const sess = {
@@ -30,10 +30,8 @@ const sess = {
   }),
 };
 
+
 app.use(session(sess));
-
-const hbs = exphbs.create({});
-
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -43,6 +41,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
+
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
