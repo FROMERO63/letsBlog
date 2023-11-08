@@ -103,6 +103,12 @@ html {
     padding:5px;
     height: fit-content;
   }
+
+#profileName {
+    color:var(--blogTextColor);
+    text-shadow: var(--textShadow);
+    background-color: black;
+  }
   
 #blogTitleEdits {
     color:var(--blogTextColor);

@@ -13,12 +13,12 @@
     <div id="contentPadding">
         <div class="field">
         <p class="control">
-            <input class="input" id="inputUsernameSU" type="username" placeholder="Username">
+            <input class="input" id="inputUsernameSU" type="username" name="createUsername" placeholder="Username">
         </p>
         </div>
     <div class="field">
         <p class="control">
-            <input class="input" id="inputPasswordSU" type="password" placeholder="Password">
+            <input class="input" id="inputPasswordSU" type="password" name="createPassword" placeholder="Password">
         </p>
     </div>
         <div class="field">
@@ -33,7 +33,7 @@
     </form>
 </section>
 <section class="card" id="loginContainer">
-     <form>
+     <form id="loginForm">
     <div class="card-content" id="formContent">
     <div class="media-content" id="loginTextContainer">
         <p class="title is-4" id="loginText">Login</p>
@@ -41,12 +41,14 @@
     <div id="contentPadding">
         <div class="field">
         <p class="control">
-            <input class="input" id="inputUsernameLI" type="username" placeholder="Username">
+            <label for="email-login">email:</label>
+        <input class="form-input" type="text" id="email-login" />
         </p>
         </div>
     <div class="field">
         <p class="control">
-            <input class="input" id="inputPasswordLI" type="password" placeholder="Password">
+           <label for="password-login">password:</label>
+        <input class="form-input" type="password" id="password-login" />
         </p>
     </div>
         <div class="field">
@@ -60,5 +62,4 @@
     </div>
     </form>
 </section>
-
-<script src="/js/login.js"></script>
+<script src="/javascript/login.js"></script>

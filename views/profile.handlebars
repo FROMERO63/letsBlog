@@ -1,0 +1,48 @@
+<section class="card">
+    <p class="title is-2" id="profileName">JohnSmith1234</p>
+</section>
+<section id="blogPostContainer">
+    <form class="form new-project-form">
+    <div class="card" id="cardContainer">
+    <div class="card-content">
+        <p class="title is-4" id="blogTitleEdits">Write a new blog post</p>
+        <div class="media">
+        <div class="media-content" id="blogContainer">
+      <div class="form-group">
+        <label for="project-name">project name:</label>
+        <input class="form-input" type="text" id="project-name" name="project-name" />
+      </div>
+      <div class="form-group">
+        <label for="project-desc">description:</label>
+        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    </form>
+</section>
+
+<section id="blogPostContainer" class="blogList">
+    <div class="card" id="cardContainer">
+    <div class="card-content">
+        <div class="media">
+        <div class="media-content" id="blogContainer">
+            <p class="title is-4" id="blogTitleEdits">Tech Blog Post</p>
+            <p class="subtitle is-6" id="usernameEdits">JohnSmith1234</p>
+            <p id="blogContent">This is the blog content that we will use as a sample</p>
+            <p id="createdDate">11/4/2023</p>
+            <div class="col-md-4">
+            <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+            </div>
+            <input class="input" id="comment" type="text" placeholder="Add a comment...">
+            <button class="button is-link" id="commentButton">Submit Comment</button>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<script src="./javascript/blog.js"></script>

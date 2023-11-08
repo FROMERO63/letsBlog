@@ -14,12 +14,12 @@
             <div id="navAlign">
               <div id="title">Lets Blog!</div>
               <a class="navLinks" href="/">Home</a>
-              <a class="navLinks" href="/blogs"> Dashboard</a>
-              {{#if logged_out}}   
-              <a class="navLinks" id="logIn" href="/login"> Login</a>
-              {{/if}}
+
               {{#if logged_in}}
-              <a class="navLinks" id="logout"> Logout</a>
+        <a href="/profile">Dashboard</a> |
+        <button class="no-button" id="logout">logout</button>
+              {{else}}
+              <a class="navLinks" id="logIn" href="/login"> Login</a>
               {{/if}}
             </div>
         </div>
@@ -33,7 +33,7 @@
   </footer>
 
   {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  <script src="/javascript/logout.js"></script>
   {{/if}}
 
 </html>
