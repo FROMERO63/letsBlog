@@ -4,16 +4,18 @@
       </p>
     </div>
 </section>
+{{#each blogs as |blog|}}
 <section id="homePageContainer">
   <div class="card" id="cardContainerHome">
     <div class="card-content">
       <div class="media">
         <div class="media-content" id="blogContainerHome">
-          <p class="title is-4" id="blogTitleEdits">Tech Blog Post</p>
+          <a href="/blog/{{blog.id}}" class="title is-4" id="blogTitleEdits">{{blog.blog_title}}</a>
           <p class="subtitle is-6" id="usernameEdits">JohnSmith1234</p>
-          <p class="subtitle is-6" id="createdDate">11/4/2023</p>
+          <p class="subtitle is-6" id="createdDate">{{blog.createdAt}}</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+{{/each}}
