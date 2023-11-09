@@ -5,7 +5,7 @@
     </div>
 </section>
 <section class="card" id="signupContainer">
-    <form>
+     <form id="signupForm">
     <div class="card-content" id="formContent">
     <div class="media-content" id="loginTextContainer">
         <p class="title is-4" id="signUpText">Sign Up</p>
@@ -13,20 +13,19 @@
     <div id="contentPadding">
         <div class="field">
         <p class="control">
-            <input class="input" id="inputUsernameSU" type="username" name="createUsername" placeholder="Username">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
         </p>
         </div>
     <div class="field">
         <p class="control">
-            <input class="input" id="inputPasswordSU" type="password" name="createPassword" placeholder="Password">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
         </p>
     </div>
-        <div class="field">
-        <p class="control">
-            <button class="button is-link">
-            Submit
-            </button>
-        </p>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
         </div>
     </div>
     </div>
