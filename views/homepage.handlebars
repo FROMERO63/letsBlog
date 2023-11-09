@@ -11,8 +11,8 @@
       <div class="media">
         <div class="media-content" id="blogContainerHome">
           <a href="/blog/{{blog.id}}" class="title is-4" id="blogTitleEdits">{{blog.blog_title}}</a>
-          <p class="subtitle is-6" id="usernameEdits">JohnSmith1234</p>
-          <p class="subtitle is-6" id="createdDate">{{blog.createdAt}}</p>
+          <p class="subtitle is-6" id="usernameEdits">{{blog.user.username}}</p>
+          <p class="subtitle is-6" id="createdDate">{{format_date blog.date_created}}</p>
         </div>
       </div>
     </div>
