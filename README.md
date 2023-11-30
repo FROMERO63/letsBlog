@@ -38,4 +38,6 @@ Clicking on the blog post from the home page allows users to add comments
 
 ## Tests
 
-To test this site, go to the website https://fromero63.github.io/programmerspub/
+To test this site, go to the [website https://fromero63.github.io/programmerspub/](https://github.com/FROMERO63/letsBlog)https://github.com/FROMERO63/letsBlog
+
+and download code to test. This is not live
