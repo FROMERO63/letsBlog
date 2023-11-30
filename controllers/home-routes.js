@@ -5,7 +5,14 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // Get all Blogs
-    const blogData = await Blog.findAll({});
+    const blogData = await Blog.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ]
+    });
 
     const blogs = blogData.map((blog) => blog.get({ plain: true }));
 

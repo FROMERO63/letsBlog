@@ -1,5 +1,5 @@
 <section class="card">
-    <p class="title is-2" id="profileName">JohnSmith1234</p>
+    <p class="title is-2" id="profileName">{{username}}</p>
 </section>
 <section id="blogPostContainer">
     <form class="form new-project-form">
@@ -24,16 +24,16 @@
     </div>
     </form>
 </section>
-
+{{#each blogs as |blog|}}
 <section id="blogPostContainer" class="blogList">
     <div class="card" id="cardContainer">
     <div class="card-content">
         <div class="media">
         <div class="media-content" id="blogContainer">
-            <p class="title is-4" id="blogTitleEdits">Tech Blog Post</p>
+            <p class="title is-4" id="blogTitleEdits">{{blog.blog_title}}</p>
             <p class="subtitle is-6" id="usernameEdits">JohnSmith1234</p>
-            <p id="blogContent">This is the blog content that we will use as a sample</p>
-            <p id="createdDate">11/4/2023</p>
+            <p id="blogContent">{{blog.content}}</p>
+            <p id="createdDate">{{format_date blog.date_created}}</p>
             <div class="col-md-4">
             <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
             </div>
@@ -44,5 +44,6 @@
     </div>
     </div>
 </section>
+{{/each}}
 
 <script src="./javascript/blog.js"></script>
